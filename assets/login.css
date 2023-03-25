@@ -1,8 +1,11 @@
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 
 body{
   background:rgb(235, 235, 235);
   padding-top: 12px;
+  font-family: 'Poppins', sans-serif;
 }
 .box{
   width: 30rem;
@@ -21,14 +24,9 @@ img{
   width: 5rem;
   height: 5rem;
 }
-span{
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-}
+
 h1{
   text-align:center;
-  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   margin: 3rem 0;
   font-size: 3rem;
@@ -49,7 +47,22 @@ input{
 input::placeholder{
   color: grey;
 }
-
+a:link , a:visited{
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1rem;
+  color: grey;
+  cursor:default;
+}
+[id=register]{
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #57b846;
+  cursor:pointer;
+}
+[id=register]:hover{
+  text-decoration: underline;
+}
 button{
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -59,7 +72,7 @@ button{
   height: 3rem;
   border: 1px solid transparent;
   border-radius: 1.5rem;
-  background-color: rgb(87, 184, 70);
+  background-color: #57b846;
   color: white;
   box-shadow: 0 10px 30px 0 rgba(87,184,70,.5);
   transition: all .4s;
