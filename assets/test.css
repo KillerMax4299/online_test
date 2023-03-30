@@ -11,12 +11,22 @@ body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: bold;
 }
+input{
+  margin: 1rem 0;
+  border: none;
+  outline: none;
+}
+
+span{
+  width: fit-content;
+}
 .boxes{
   height: 100%;
   position:absolute;
 }
 .centered{
-  height: 1.5rem;
+  font-size: 25px;
+  height: 2.3rem;
   display: flex;
   justify-content: center;
 }
@@ -31,18 +41,25 @@ body{
 .question{
   font-weight: 400;
   margin: 2rem 3rem; 
-  font-size: smaller;
 }
 .answers{
-  font-size: smaller;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
   font-weight: 400;
   margin: 2rem 3rem; 
   line-height: 2rem;
+  transform: translateY(-50%);
+}
+.qNo , .question, .answers{
+  font-size: 24px;
 }
 [id=online_test]{
   width:var(--leftbox);
 }
 [id=questions]{
+  background-color: rgb(243 ,243 ,243);
   right: 0;
   width: var(--rightbox);
   box-shadow: inset 48px -3px 19px -48px rgba(0,0,0,0.15);
@@ -53,4 +70,75 @@ body{
 [id=tab2]{
   background-color: rgb(228, 228,228);
   box-shadow: inset 48px -3px 19px -48px rgba(0,0,0,0.15);
+}
+[id=bottom_panel]{
+  position: absolute;
+  bottom: 0;
+  width: var(--leftbox);
+  height: 5.8rem;
+  background-color: rgb(240, 240,240);
+}
+button{
+  border: none;
+  outline: none;
+  height: 2rem;
+  color: white;
+}
+button:hover{
+  opacity: 0.7;
+}
+.buttons{
+  display: flex;
+  justify-content: space-around;
+}
+[id=review]{
+  background-color: rgb(164, 5,2);
+  width: 10rem;
+  border-radius: 1rem;
+}
+[id=next],[id=previous]{
+  background-color: rgb(44, 124, 193);
+  width: 5rem;
+}
+[id=submit]{
+  background-color: rgb(57, 139, 56);
+  width: 7.1rem;
+  border-radius: 1rem;
+}
+[id=next]{
+  border-radius: .2rem 1rem 1rem .2rem;
+}
+[id=previous]{
+  border-radius: 1rem .2rem .2rem 1rem;
+}
+
+@media (max-width: 1024px){
+  
+  span{
+    margin: -4.8px 0;
+  }
+  input{
+    transform: translate(3.6px,1.3px) scale(0.9);
+  }
+  .question{
+    margin: 1.5rem 2rem;
+    margin-bottom: 0;
+    font-size: 18.2px;
+  }
+  .qNo{
+    font-size: 19.7px;
+    margin: 0 2rem;
+    margin-top: 1.8rem;
+  }
+  .centered{
+    height: 1.6rem;
+    font-size: 18.6px;
+  }
+  .answers{
+    font-size: 18.1px;
+    margin: 1rem 1.6rem;
+  } 
+  [id=bottom_panel] {
+    height: 5rem;
+  }
 }
